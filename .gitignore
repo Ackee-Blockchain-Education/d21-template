@@ -1,6 +1,8 @@
-__pycache__
+
+.wake
 .env
-.history
+pytypes
+__pycache__/
+*.py[cod]
 .hypothesis/
-build/
-reports/
+wake-coverage.cov

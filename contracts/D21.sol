@@ -1,40 +1,42 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity 0.8.21;
 
 import "./IVoteD21.sol";
 
-contract D21 is IVoteD21{
-    
-    function addSubject(string memory name) external {
+contract D21 is IVoteD21 {
+
+    function addSubject(string memory name) external override {
 
     }
 
-    function addVoter(address addr) external {
+    function addVoter(address addr) external override {
 
     }
 
-    function getSubjects() external view returns(address[] memory) {
+    function getSubjects() external override view returns(address[] memory) {
 
     }
 
-    function getSubject(address addr) external view returns(Subject memory) {
+    function getSubject(address addr) external override view returns(Subject memory) {
 
     }
 
-    function votePositive(address addr) external {
+    function startVoting() external override {
 
     }
 
+    function votePositive(address addr) external override {
+
+    }
     function voteNegative(address addr) external {
 
     }
 
-    function getRemainingTime() external view returns (uint256) {
+    function getRemainingTime() external view returns(uint256) {
 
     }
 
     function getResults() external view returns(Subject[] memory) {
 
     }
-
 }

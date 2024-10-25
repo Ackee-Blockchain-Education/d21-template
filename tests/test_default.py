@@ -1,3 +1,6 @@
+"""
+Wake docs: https://ackee.xyz/wake/docs/latest/
+"""
 from wake.testing import *
 
 

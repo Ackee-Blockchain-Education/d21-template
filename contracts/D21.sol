@@ -1,42 +1,45 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.21;
+pragma solidity 0.8.26;
 
 import "./IVoteD21.sol";
 
 contract D21 is IVoteD21 {
+    // State variables
 
-    function addSubject(string memory name) external override {
+    // Custom errors
 
-    }
+    // Functions
 
-    function addVoter(address addr) external override {
+    /// @inheritdoc IVoteD21
+    function addSubject(string memory name_) external {}
 
-    }
+    /// @inheritdoc IVoteD21
+    function getSubjects() external view returns (address[] memory) {}
 
-    function getSubjects() external override view returns(address[] memory) {
+    /// @inheritdoc IVoteD21
+    function getSubject(address addr_) external view returns (Subject memory) {}
 
-    }
+    /// @inheritdoc IVoteD21
+    function addVoter(address voter_) external {}
 
-    function getSubject(address addr) external override view returns(Subject memory) {
+    /// @inheritdoc IVoteD21
+    function startVoting() external {}
 
-    }
+    /// @inheritdoc IVoteD21
+    function votePositive(address subject_) external {}
 
-    function startVoting() external override {
+    /// @inheritdoc IVoteD21
+    function voteNegative(address subject_) external {}
 
-    }
+    /// @inheritdoc IVoteD21
+    function voteBatch(
+        address[] calldata subjects_,
+        bool[] calldata votes_
+    ) external {}
 
-    function votePositive(address addr) external override {
+    /// @inheritdoc IVoteD21
+    function getRemainingTime() external view returns (uint256) {}
 
-    }
-    function voteNegative(address addr) external {
-
-    }
-
-    function getRemainingTime() external view returns(uint256) {
-
-    }
-
-    function getResults() external view returns(Subject[] memory) {
-
-    }
+    /// @inheritdoc IVoteD21
+    function getResults() external view returns (Subject[] memory) {}
 }
